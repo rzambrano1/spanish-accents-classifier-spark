@@ -1,0 +1,59 @@
+Creating Virtual Environment: python -m venv .venv
+
+Creating Virtual Environment with Conda: conda create -n sparknlp python=3.8 -y
+
+======================================================
+Run this in cmd to get the conda env kernel in Jupyter
+conda install nb_conda_kernels
+jupyter notebook
+======================================================
+
+Check CUDA: nvcc -V
+To check which python in windows: python -c "import sys; print(sys.executable)"
+
+====== Packages ====== 
+pip install numpy pandas gensim spacy
+python -m pip install -U matplotlib
+pip install nltk
+pip install pyspark
+pip install spark-nlp
+
+pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121	# Windows
+pip3 install torch torchvision torchaudio							# Linux WSL
+
+python -m pip install "dask[complete]"    # Install everything
+pip install graphviz
+pip install librosa
+pip install SpeechRecognition
+
+sudo apt-get install portaudio19-dev      # To be able to install PyAudio
+sudo apt-get install libasound-dev
+pip install PyAudio                       # Required by SpeechRecognition to use mic input
+
+pip install pocketsphinx
+pip install -U openai-whisper
+
+======================
+
+===== Check GPU is available in torch =====
+python
+>>> import torch
+>>> print(torch.cuda.is_available())
+>>> exit()
+
+===========================================
+
+===== Jupyter Kernel ====
+Source:
+https://www.geeksforgeeks.org/using-jupyter-notebook-in-virtual-environment/
+=========================
+
+pip install ipykernel
+pip install notebook
+ipython kernel install --user --name=.venv
+
+=========================
+
+Connect devices to WLS
+https://learn.microsoft.com/en-us/windows/wsl/connect-usb
+
